@@ -1,26 +1,18 @@
-# python_environment_setup
+# Python environment setup
 
 Versões de Python​
 
-Motivos ​
-
-Pyenv (https://github.com/pyenv/pyenv)​
-
-Python docker container + docker compose​
-
-Virtualenv e Virtualenvwrapper​
-
-Pip​
-
-Pytest​
-
-Httpie​
-
-Ipython​
-
-Ipdb/pdbpp​
-
-autoenv/direnv​
+Motivos
+-------
+* [Pyenv](https://github.com/pyenv/pyenv)
+* Python [docker](https://www.docker.com/) container + [docker compose](https://docs.docker.com/compose/)
+* [Virtualenv](https://virtualenv.pypa.io/en/latest/) e [Virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
+* [Pip](https://pip.pypa.io/en/stable/)
+* [Pytest](https://docs.pytest.org/en/6.2.x/)
+* [Httpie](https://httpie.io/)
+* [Ipython](https://ipython.org/)
+* [Ipdb](https://github.com/gotcha/ipdb)/[pdbpp](https://github.com/pdbpp/pdbpp)
+* [autoenv](https://github.com/inishchith/autoenv)/[direnv](https://github.com/andrewp-as-is/direnv.py)
 
 
 Python docker container + docker compose
