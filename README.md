@@ -77,3 +77,52 @@ Este comando vai executar todos os testes que contenham a string test_login_shou
 Existem centenas de plugins para Pytest (https://docs.pytest.org/en/latest/reference/plugin_list.html) mas vamos mencionar o pytest-cov (https://pypi.org/project/pytest-cov/) que provê code coverage, ferramenta essencial para achar código sem teste unitário.
 
 Para conhecer o Pytest em detalhes, consulte https://docs.pytest.org/.
+
+
+httpie
+======
+
+Com frequência usamos clientes HTTP e o httpie é um cliente que tem características interessantes tais como:
+
+* suporte a JSON
+
+* sessões persistentes
+
+* saída formatada e colorida
+
+* plugins
+
+* suporte a uploads, formulários
+
+A lista de características é extensa. Um ponto forte do httpie é o formato dos parâmetros que é intuitivo.
+
+Vamos ver alguns exemplos:
+
+1. https httpie.io/hello
+
+Neste exemplo usamos o `https` que executa um método GET no endpoint.
+
+2. http PUT pie.dev/put X-API-Token:123 name=John
+
+Neste exemplo usamos o método PUT passando um HTTP header X-API-Token com valor 123 e um payload com chave name e valor John.
+
+Identificamos o header por `:` e payload por `=`.
+
+3. http -f POST pie.dev/post hello=World
+
+Neste exemplo o payload é enviado com Content-type=application/x-www-form-urlencoded, pois usamos o parâmetro `-f`, formulário.
+
+4. http -v pie.dev/get
+
+Neste exemplo o parâmetro `-v` habilita o modo verboso e mostra detalhes da requisição e resposta HTTP.
+
+5. http pie.dev/post < files/data.json
+
+Neste exemplo um POST é executado usando um arquivo JSON.
+
+6. http pie.dev/image/png > image.png
+
+Neste exemplo é feito o download de uma imagem e a saída é direcionada para um arquivo png.
+
+Para mais informações acesse [httpie.io](https://httpie.io/)
+
