@@ -126,3 +126,21 @@ Neste exemplo é feito o download de uma imagem e a saída é direcionada para u
 
 Para mais informações acesse [httpie.io](https://httpie.io/)
 
+ipython
+=======
+
+O Ipython é um interpretador de Python com funções que otimizam a produtividade. Ele tem várias funcionalidades tais como:
+
+1. carregamento de script: `ipython -i meuscript.py`.
+
+2. acesso ao docstring.
+
+3. salvar trechos da sessão do ipython em arquivo.
+
+4. acesso direto ao shell: `!ls -l`.
+
+5. persistência de sessão.
+
+O ipython pode ser usado com debugger como o ipdb ou o pdbpp, e roda como um dos kernels do Jupyter.
+
+Para ver a lista de referência dos comando do ipython execute: `%quickref`.
