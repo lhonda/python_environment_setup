@@ -144,3 +144,48 @@ O Ipython é um interpretador de Python com funções que otimizam a produtivida
 O ipython pode ser usado com debugger como o ipdb ou o pdbpp, e roda como um dos kernels do Jupyter.
 
 Para ver a lista de referência dos comando do ipython execute: `%quickref`.
+
+ipdb
+====
+
+O Ipdb é um debugger para python e usa comandos tais como continue(c), next(n), step into(s), jump(j), list(l), where(w), etc.
+
+Para ativar o ipdb basta importar no script Python que você quer debugar e ativar o trace:
+
+`import ipdb;ipdb.set_trace()`
+
+Os comandos mais comuns são:
+
+- next(n): executa até a próxima linha
+- step into(s):executa a linha corrente;entra dentro da função chamada na linha corrente
+- jump(j): pula para a linha especificada
+- list(l): lista as linhas do frame atual
+- help(h): mostra o manual; pode ser executado passando um comando como:h l (help list) 
+- where(w): mostra a pilha de frames.
+- print(p): mostra o valor de uma variável: p mylist
+- pretty pprint(pp):mostra o valor de uma variável: pp mylist
+- quit(q): sai do ipdb
+
+pdbpp
+=====
+
+O pdbpp é um debugger muito similar ao Ipdb, a maioria dos comandos são idênticos aos do Ipdb.
+
+O import deve ser feito desta maneira:
+
+`import pdb;pdb.set_trace()`
+
+O cursor do pdbpp tem o seguinte formato:
+
+`(Pdb++)`
+
+O python 3 já tem um módulo pdb embutido mas o ipdb/pdbpp tem melhorias de interface e características.
+
+autoenv
+=======
+
+direnv
+======
+
+
+
