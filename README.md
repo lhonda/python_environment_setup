@@ -12,7 +12,7 @@ Motivos
 * [Httpie](https://httpie.io/)
 * [Ipython](https://ipython.org/)
 * [Ipdb](https://github.com/gotcha/ipdb)/[pdbpp](https://github.com/pdbpp/pdbpp)
-* [autoenv](https://github.com/inishchith/autoenv)/[direnv](https://github.com/andrewp-as-is/direnv.py)
+* [autoenv](https://github.com/inishchith/autoenv)/[direnv](https://direnv.net/)
 
 
 Python docker container + docker compose
@@ -184,8 +184,29 @@ O python 3 já tem um módulo pdb embutido mas o ipdb/pdbpp tem melhorias de int
 autoenv
 =======
 
+O autoenv é uma ferramenta escrita em shell que executa um arquivo .env assim que você no diretório onde o .env está situado.
+
+O arquivo .env na raiz de um projeto pode configurar variáveis de ambiente e rodar comandos, como no exemplo abaixo:
+
+
+`
+export API_URL=https://httpbin.org
+export API_USERNAME=lancelot
+export API_CREDENTIAL="Ni!Ni!Ni!"
+alias l='ls -latr'
+alias t='pytest $@'
+`
+
+Evite versionar o arquivo .env e adicione variáveis relacionadas a credenciais, endpoints.   
+
+
+
 direnv
 ======
+
+O direnv é uma ferramenta escrita em Go, similar ao autoenv mas o arquivo utilizado para rodar comandos é o .envrc.
+
+Caso o conteúdo do arquivo .envrc seja modificado, o direnv demanda que o conteúdo seja aprovado antes de executar o arquivo.
 
 
 
