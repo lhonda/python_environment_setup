@@ -1,9 +1,9 @@
 # Python environment setup
 
-Versões de Python
+Este documento ilustra alguma ferramentas que facilitam o uso do Python no seu projeto.
 
-Motivos
--------
+## Ferramentas
+
 * [Pyenv](https://github.com/pyenv/pyenv)
 * Python [docker](https://www.docker.com/) container + [docker compose](https://docs.docker.com/compose/)
 * [Virtualenv](https://virtualenv.pypa.io/en/latest/) e [Virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
@@ -14,6 +14,83 @@ Motivos
 * [Ipdb](https://github.com/gotcha/ipdb)/[pdbpp](https://github.com/pdbpp/pdbpp)
 * [autoenv](https://github.com/inishchith/autoenv)/[direnv](https://direnv.net/)
 
+
+Pyenv
+=====
+
+O Pyenv é uma ferramenta que gerencia a instalação de versões do Python.
+
+Desta forma você pode usufruir de diferentes versões do Python sem mexer na instalação padrão do Python do seu sistema operacional.
+
+O Pyenv permite que seja elegido uma versão global de Python e versões locais por diretório, ideal para uso em projetos.
+
+Para tanto, basta instalar, configurar o Pyenv, executar um novo shell e instalar a versão de Python requerida.
+
+O truque que o Pyenv usa é baseado na manipulação da variável de ambiente PATH, de modo que o ao digitar `python` no shell, o primeiro caminho que encontra o comando python é o caminho definido pelo Pyenv.
+
+Caso queira usar o Python do sistema, basta usar o caminho completo:
+
+`/usr/bin/python`
+
+
+Virtualenv
+==========
+
+O virtualenv provisiona uma instalação isolada da versão de Python corrente. O objetivo é usar esta versão isolada do Python para o seu projeto de forma que qualquer dependência seja contida nesta instalação.
+
+Podemos criar um virtualenv da seguinte forma:
+
+`virtualenv venv`
+
+ou
+
+`python -m venv venv`
+
+Em ambos os casos um diretório venv será criado no diretório corrente e no diretório venv/bin temos os scripts para ativar o virtualenv, o python e pip desse virtualenv.
+
+Para ativar o virtualenv basta executar:
+
+`source venv/bin/activate` 
+
+Para desativar o virtualenv:
+
+`deactivate`
+
+Ao ativar um virtualenv a variável de ambiente PS1 é alterada, identificando o nome do virtualenv ativado.
+
+Uma dica é configurar algum powerline como o https://github.com/justjanne/powerline-go para ajudar na identificação do virtualenv, branches de git,etc.
+
+Virtualenvwrapper
+=================
+
+O Virtualenvwrapper tem a mesma funcionalidade do Virtualenv contudo ele cria o virtualenv abaixo do diretório $HOME/.virtualenvs. Deste modo, se você usa alguma IDE como o Pycharm, a busca fica mais limpa.
+
+Os comandos mais usados do Virtualenwrapper são:
+
+- mkvirtualenv <nome>
+- rmvirtualenv <nome>
+- lsvirtualenv
+- workon <nome>
+- deactivate
+- llsitepackages
+
+
+Pip
+===
+
+O Pip é o gerenciador de pacotes de Python.
+
+Podemos instalar, remover,atualizar pacotes, listar pacotes antigos, listar pacotes instalados.
+
+Os pacotes externos estão cadastrados na [Loja de queijo](https://cheeseshop.python.org)
+
+Exemplos:
+
+- pip install requests
+- pip install -U requests  # atualizar pacotes  
+- pip uninstall requests
+- pip list -o  # lista pacotes antigos
+- pip freeze  # lista pacotes instalados
 
 Python docker container + docker compose
 ========================================
@@ -207,6 +284,5 @@ direnv
 O direnv é uma ferramenta escrita em Go, similar ao autoenv mas o arquivo utilizado para rodar comandos é o .envrc.
 
 Caso o conteúdo do arquivo .envrc seja modificado, o direnv demanda que o conteúdo seja aprovado antes de executar o arquivo.
-
 
 
