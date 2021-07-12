@@ -1,6 +1,6 @@
 # Python environment setup
 
-Este documento ilustra alguma ferramentas que facilitam o uso do Python no seu projeto.
+Este documento ilustra algumas ferramentas que facilitam o uso do Python no seu projeto.
 
 ## Ferramentas
 
@@ -22,7 +22,7 @@ O Pyenv é uma ferramenta que gerencia a instalação de versões do Python.
 
 Desta forma você pode usufruir de diferentes versões do Python sem mexer na instalação padrão do Python do seu sistema operacional.
 
-O Pyenv permite que seja elegido uma versão global de Python e versões locais por diretório, ideal para uso em projetos.
+O Pyenv permite que você eleja uma versão global de Python e versões locais por diretório, ideal para uso em projetos.
 
 Para tanto, basta instalar, configurar o Pyenv, executar um novo shell e instalar a versão de Python requerida.
 
@@ -72,7 +72,7 @@ Os comandos mais usados do Virtualenwrapper são:
 - lsvirtualenv
 - workon <nome>
 - deactivate
-- llsitepackages
+- lssitepackages
 
 
 Pip
@@ -131,7 +131,7 @@ O Pytest procura por arquivos nomeados seguindo os padrões test_*.py e *_test.p
 
 ## Fixtures
 
-As fixtures são os passos e dados necessários para rodar um teste. Digamos que uma função a ser testada precisa de determinados parâmetros então podemos definir fixtures que retornam esses parâmetros.
+As fixtures provisionam os dados e estados necessários para rodar um teste. Digamos que uma função a ser testada precisa de determinados parâmetros então podemos definir fixtures que retornam esses parâmetros.
 
 As fixtures podem ser usadas em vários testes e usam o decorador @pytest.fixture.
 
